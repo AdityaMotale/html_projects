@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Board</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <div class="screen">
+        <section class="tools-board">
+            <div class="tools">
+                <label class="title">Shapes</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle">
+                        <img src="./assets/rectangle.svg" alt="">
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <img src="./assets/circle.svg" alt="">
+                        <span>Circle</span>
+                    </li>
+                    <li class="option active tool" id="triangle">
+                        <img src="./assets/triangle.svg" alt="">
+                        <span>Triangle</span>
+                    </li>
+                    <li class="option tool">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill Color</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="tools">
+                <label class="title">Options</label>
+                <ul class="options">
+                    <li class="option tool" id="brush">
+                        <img src="./assets/brush.svg" alt="">
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="brush">
+                        <img src="./assets/eraser.svg" alt="">
+                        <span>Eraser</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="stroke-slider" min="1" max="20" value="4">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+    </div>
+
+</body>
+
+</html>

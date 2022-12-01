@@ -1,0 +1,35 @@
+body {
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.75fr 2.8fr 1.5fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+.div1 {
+    background-color: aquamarine;
+}
+
+.div2 {
+    background-color: blue;
+}
+
+.div3 {
+    background-color: blueviolet;
+}
+
+.div4 {
+    background-color: bisque;
+}
+
+.div5 {
+    background-color: brown;
+}
+
+.div6 {
+    background-color: cyan;
+}

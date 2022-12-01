@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2.5fr 1.5fr;
+}
+
+
+.div1 {
+    background-color: blueviolet;
+}
+
+.div2 {
+    background-color: cyan;
+}
+
+.div3 {
+    background-color: cornsilk;
+}
+
+.div4 {
+    background-color: crimson;
+}
+.div5 {
+    background-color: darkblue;
+}
+.div6 {
+    background-color: aquamarine;
+}

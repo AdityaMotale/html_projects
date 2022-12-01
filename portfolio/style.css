@@ -1,0 +1,149 @@
+:root {
+    --bg-color: rgb(6, 11, 24);
+    --border-color: rgb(255, 255, 255, 0.1);
+    --highlight-color: #A259FF;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+img:hover {
+    filter: invert(54%) sepia(53%) saturate(6648%) hue-rotate(240deg) brightness(100%) contrast(106%);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid var(--border-color);
+}
+
+nav>.nav-section {
+    padding: 2rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-left: 2px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-logo-section {
+    flex-basis: calc(100% / 2);
+    justify-content: flex-start;
+}
+
+#nav-logo-section>img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+#nav-social-section,
+#nav-contact-section {
+    flex-grow: 1;
+}
+
+#nav-link-section {
+    flex-basis: 12%;
+    gap: 6rem;
+}
+
+#nav-social-section {
+    gap: 3rem;
+}
+
+main {
+    flex-grow: 1;
+}
+
+main>article {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 0.965fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+main>article>.article-section {
+    height: 100%;
+    border: 1px solid var(--border-color);
+}
+
+main>article>.article-image-section {
+    background-image: url("./assets/images/img1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>article>.article-description-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3.5rem;
+}
+
+main>article>.article-description-section>p>a {
+    color: var(--highlight-color);
+}
+
+main>article>.article-nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5rem;
+}
+
+main>article>.article-title-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main>article>.article-title-section>h1 {
+    font-family: "Rubik" sans-serif;
+    font-weight: 900;
+}
+
+main>article>.article-title-section>h2 {
+    padding-left: 3rem;
+    flex-basis: 50%;
+    font-family: "Rubik", sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 3rem;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+main>article>.article-title-section>img {
+    padding-right: 3rem;
+}

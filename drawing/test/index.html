@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css">
+    </link>
+    <!-- jquery.js must be loaded before bootstrap.js. -->
+    <script type="text/javascript" src="http://getbootstrap.com/2.3.2/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/2.3.2/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+
+        canvas {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="span1">
+            <div id="tools-area" class="btn-group btn-group-vertical" data-toggle="buttons-radio">
+                <button title="move" data-placement="right" type="button" class="btn active" value="move">
+                    <i class="icon-move"></i>
+                </button>
+                <button title="pencil" data-placement="right" type="button" class="btn" value="pencil">
+                    <i class="icon-pencil"></i>
+                </button>
+                <button title="rectangle" data-placement="right" type="button" class="btn" value="rect">
+                    <i class="icon-stop"></i>
+                </button>
+            </div>
+        </div>
+        <div class="span10">
+            <div id="canvas-area">
+                <canvas id="background-canvas">
+                    <div>canvas is not supported.</div>
+                </canvas>
+                <canvas id="user-canvas"></canvas>
+                <canvas id="foreground-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
