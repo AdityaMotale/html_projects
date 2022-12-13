@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Calc - By Adii</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background-color: azure;
+        box-sizing: border-box;
+      }
+
+      .main {
+        padding: 5em 0px;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      select {
+        border: none;
+        background-color: transparent;
+        text-decoration: underline;
+        font-family: sans-serif;
+        color: blue;
+      }
+
+      select:focus {
+        outline: none;
+      }
+
+      .card1 {
+        border-bottom: 1px solid #f2f2f2;
+        display: flex;
+        justify-content: space-between;
+        min-width: 260px;
+        background-color: white;
+        padding: 0px 1em 0px 2em;
+        border-right: 20px solid #f2f2f2;
+      }
+
+      .card1 > .Card1SubRow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card1 > .Card1SubRow > input {
+        width: 40px;
+        height: 30px;
+        border: none;
+        text-align: right;
+        padding-right: 10px;
+        font-size: medium;
+      }
+
+      .card1 > .Card1SubRow > input:focus {
+        outline: none;
+        border: none;
+      }
+
+      .cardSection {
+        margin: 20px 0px;
+      }
+
+      .cardTitle {
+        background-color: #f2f2f2;
+        min-width: 260px;
+        text-align: left;
+        padding: 1px 2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      const calcArea = () => {
+        let l = document.getElementById("lengthVal");
+        let w = document.getElementById("widthVal");
+
+        let area = l.value * w.value;
+
+        document.getElementById("areaVal").innerHTML = `${area} cm²`;
+      };
+      window.onload = () => {
+        // To select the value of dropdown field
+
+        // var e = document.getElementById("lightingType");
+        // var value = e.options[e.selectedIndex].value;
+        // var text = e.options[e.selectedIndex].text;
+
+        document
+          .getElementById("lengthVal")
+          .addEventListener("change", calcArea);
+        document
+          .getElementById("widthVal")
+          .addEventListener("change", calcArea);
+      };
+    </script>
+    <section class="main">
+      <!-- First Cards Section -->
+      <div class="card1">
+        <p>Lighting type</p>
+        <select name="Lighting Type" id="lightingType">
+          <option value="Desk Lighting">Desk Lighting</option>
+          <option value="Dining">Dining</option>
+          <option value="Living Space">Living Space</option>
+          <option value="Bedroom">Bedroom</option>
+        </select>
+      </div>
+      <div class="card1">
+        <p>Required Illumination</p>
+        <div class="Card1SubRow">
+          <input type="text" value="23" />
+          <select name="lx" id="lx">
+            <option value="lx">lx</option>
+            <option value="kLx">kLx</option>
+          </select>
+        </div>
+      </div>
+      <!-- Second Cards Section -->
+      <div class="cardSection">
+        <div class="cardTitle">
+          <p>Illuminated Area</p>
+        </div>
+        <div class="card1">
+          <p>Length</p>
+          <div class="Card1SubRow">
+            <input type="text" value="5" id="lengthVal" />
+            <select name="length" id="length">
+              <option value="cm">centimeter</option>
+              <option value="m">meter</option>
+            </select>
+          </div>
+        </div>
+        <div class="card1">
+          <p>Width</p>
+          <div class="Card1SubRow">
+            <input type="text" value="4" id="widthVal" />
+            <select name="width" id="width">
+              <option value="cm">centimeter</option>
+              <option value="m">meter</option>
+            </select>
+          </div>
+        </div>
+        <div class="card1">
+          <p>Area</p>
+          <div class="Card1SubRow">
+            <!-- <input type="text" value="23" /> -->
+            <p id="areaVal">20 cm²</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
